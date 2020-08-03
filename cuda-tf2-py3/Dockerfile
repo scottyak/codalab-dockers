@@ -8,4 +8,5 @@ RUN python3 -m pip install \
     pandas==1.1.0 \
     scikit-learn==0.23.1 \
     xgboost==1.1.1 \
-    Pillow==7.2.0
+    Pillow==7.2.0 \
+    matplotlib==3.3.0
