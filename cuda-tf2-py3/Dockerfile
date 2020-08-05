@@ -9,4 +9,5 @@ RUN python3 -m pip install \
     scikit-learn==0.23.1 \
     xgboost==1.1.1 \
     Pillow==7.2.0 \
-    matplotlib==3.3.0
+    matplotlib==3.3.0 \
+    lightgbm==2.3.1
