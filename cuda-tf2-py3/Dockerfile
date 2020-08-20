@@ -10,4 +10,5 @@ RUN python3 -m pip install \
     xgboost==1.1.1 \
     Pillow==7.2.0 \
     matplotlib==3.3.0 \
-    lightgbm==2.3.1
+    lightgbm==2.3.1 \
+    powerlaw==1.4.6
