@@ -27,4 +27,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: scottyak00/pgdl-competition-image
           path: cuda-tf2-py3
+          dockerfile: cuda-tf2-py3/Dockerfile
           tags: ${{ steps.datetime.outputs.datetime }}
