@@ -16,9 +16,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Get current datetime
-        id: datetime
-        run: echo "::set-env name=datetime::$(date +%Y%m%d-%H%M%S)"
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +%Y%m%d-%H%M%S)"
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
@@ -28,5 +28,4 @@ jobs:
           repository: scottyak00/pgdl-competition-image
           path: cuda-tf2-py3
           dockerfile: cuda-tf2-py3/Dockerfile
-          tags: latest
-          #tags: ${{ steps.datetime.outputs.datetime }}
+          tags: ${{ steps.date.outputs.date }}
