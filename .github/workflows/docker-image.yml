@@ -13,6 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build cuda-tf2-py3/ --file cuda-tf2-py3/Dockerfile --tag scottyak00/pgdl-competition-image:$(date +%Y%m%d-%H%M%S)
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Get current datetime
+        id: datetime
+        run: echo "::set-env name=datetime::$(date +%Y%m%d-%H%M%S)"
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: scottyak00
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: scottyak00/pgdl-competition-image
+          path: cuda-tf2-py3
+          tags: ${{ steps.datetime.outputs.datetime }}
