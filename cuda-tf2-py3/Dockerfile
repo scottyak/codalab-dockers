@@ -11,4 +11,5 @@ RUN python3 -m pip install \
     Pillow==7.2.0 \
     matplotlib==3.3.0 \
     lightgbm==2.3.1 \
-    powerlaw==1.4.6
+    powerlaw==1.4.6 \
+    tensorflow-hub==0.9.0
