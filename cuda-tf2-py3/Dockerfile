@@ -12,4 +12,5 @@ RUN python3 -m pip install \
     matplotlib==3.3.0 \
     lightgbm==2.3.1 \
     powerlaw==1.4.6 \
-    tensorflow-hub==0.9.0
+    tensorflow-hub==0.9.0 \
+    tensorflow-addons==0.11.2
