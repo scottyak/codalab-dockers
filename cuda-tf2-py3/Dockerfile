@@ -13,4 +13,8 @@ RUN python3 -m pip install \
     lightgbm==2.3.1 \
     powerlaw==1.4.6 \
     tensorflow-hub==0.9.0 \
-    tensorflow-addons==0.11.2
+    tensorflow-addons==0.11.2 \
+    Cython==0.29.21 \
+    ripser==0.5.4 \
+    tensorflow-datasets==3.2.1 \
+    tensorflow-probability==0.11.0
