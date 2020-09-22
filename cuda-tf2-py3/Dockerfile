@@ -3,6 +3,8 @@
 FROM tensorflow/tensorflow:2.2.0-gpu
 
 RUN python3 -m pip install --upgrade pip
+# ripser requires Cython to be installed first
+RUN python3 -m pip install Cython==0.29.21   
 RUN python3 -m pip install \
     pyyaml==5.3.1 \    
     pandas==1.1.0 \
@@ -14,7 +16,6 @@ RUN python3 -m pip install \
     powerlaw==1.4.6 \
     tensorflow-hub==0.9.0 \
     tensorflow-addons==0.11.2 \
-    Cython==0.29.21 \
     ripser==0.5.4 \
     tensorflow-datasets==3.2.1 \
     tensorflow-probability==0.11.0
