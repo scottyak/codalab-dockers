@@ -18,4 +18,6 @@ RUN python3 -m pip install \
     tensorflow-addons==0.11.2 \
     ripser==0.5.4 \
     tensorflow-datasets==3.2.1 \
-    tensorflow-probability==0.11.0
+    tensorflow-probability==0.11.0 \
+    torch==1.6.0 \
+    torchvision==0.7.0
